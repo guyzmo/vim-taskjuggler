@@ -4,11 +4,11 @@ vim-taskjuggler -- syntax highlighting for task-juggler (neobundle/vundle ready)
 ## DESCRIPTION
 
 This repository contains all files need to automatically highlight
-TaskJuggler-files. The detection is based on the file-suffix: .tjp,
-.taskjuggler, .tj3.
+TaskJuggler-files. The detection is based on the file-suffix: `.tjp`,
+`.taskjuggler`, `.tj3`.
 
 This repository comes with a script which fetches the syntax file from
-the taskjuggler-repository (https://github.com/taskjuggler/TaskJuggler). It's
+the [taskjuggler-repository](https://github.com/taskjuggler/TaskJuggler). It's
 not included in this git-repo, it's installed from the installed gem.
 
 The `install.sh` script installs the syntax file from the gem bundle.
@@ -46,7 +46,8 @@ Please drop me a message via github if you experience any problems.
 
 ## Attributions
 
-This is a fork of @maxmeyer's work to adapt the script to pathogen.
+This is a fork of [@maxmeyer](https://github.com/maxmeyer)'s work to adapt the script to pathogen.
 
-(c)2011 Max Meyer, @maxmeyer
-(c)2015 Bernard `Guyzmo` Pratz, @guyzmo
+ - (c)2011 Max Meyer, [@maxmeyer](https://github.com/maxmeyer)
+ - (c)2015 Bernard `Guyzmo` Pratz, [@guyzmo](https://github.com/guyzmo)
+
