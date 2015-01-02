@@ -1,5 +1,5 @@
-vim-tjp(1) -- vim syntax highlighting for taskjuggler 3
-=======================================================
+vim-taskjuggler -- syntax highlighting for task-juggler (neobundle/vundle ready)
+================================================================================
 
 ## DESCRIPTION
 
@@ -9,46 +9,44 @@ TaskJuggler-files. The detection is based on the file-suffix: .tjp,
 
 This repository comes with a script which fetches the syntax file from
 the taskjuggler-repository (https://github.com/taskjuggler/TaskJuggler). It's
-not included in this git-repo.
+not included in this git-repo, it's installed from the installed gem.
 
-By default the `setup.rb`-script installs the vim-extension to
-`~/.vim/bundle.available/vim-taskjuggler`. If you might wonder why I did it
-that way, please look at https://github.com/tpope/vim-pathogen. This plugin
-enables you to have one directory per vim-extension.
-
-## DEPENDENCIES
-
-I use different rubygems to get that thing running.
-  * Bundler (http://gembundler.com/)
-  * Thor (https://github.com/wycats/thor)
-  * Open4 (https://github.com/ahoward/open4)
+The `install.sh` script installs the syntax file from the gem bundle.
 
 ## USAGE
 
 ```bash
 git clone <repo>
 cd <repo>
-bundle install
-./setup.rb install gem
-./setup.rb install extension 
-./setup.rb install syntax_file 
+./install.sh
 ```
 
-If you prefer another path to install the extension please tell the script
-about it (not tested yet).
+Within `Neobundle` just use the following:
 
-```bash
-./setup.rb install extension <path_to_extension>
-./setup.rb install syntax_file <path_to_extension>
+```vim
+NeoBundleLazy 'guyzmo/vim-taskjuggler' {
+    \  'build' : {
+    \    'unix': 'sh install.sh'
+    \  },
+    \  'autoload': {
+    \    'filetypes': ['tjp', 'taskjuggler', 'tj3']
+    \  }
+    \ }
 ```
 
 ## Files
   * `ftdetect/tjp.vim`: Detect the filetype
   * `ftplugin/tjp.vim`: Setting options for the taskjuggler-language
   * `syntax/tjp.vim`: Syntax file 
-  * `setup.rb`: Installer-script
-
+  * `install.sh`: Installer-script
 
 ## Support
 
 Please drop me a message via github if you experience any problems.
+
+## Attributions
+
+This is a fork of @maxmeyer's work to adapt the script to pathogen.
+
+(c)2011 Max Meyer, @maxmeyer
+(c)2015 Bernard `Guyzmo` Pratz, @guyzmo
